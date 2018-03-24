@@ -204,5 +204,5 @@ failmalloc_init (void)
   failmalloc_install ();
 }
 
-void (*__malloc_initialize_hook) (void) = failmalloc_init;
+void (*__MALLOC_HOOK_VOLATILE __malloc_initialize_hook) (void) = failmalloc_init;
 

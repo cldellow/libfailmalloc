@@ -1,0 +1,10 @@
+.deps/
+.libs/
+Makefile
+config.log
+config.status
+failmalloc.lo
+failmalloc.o
+libfailmalloc.la
+libtool
+
