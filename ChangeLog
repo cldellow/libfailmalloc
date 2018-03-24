@@ -1,0 +1,23 @@
+2006-07-19  Yoshinori K. Okuji  <okuji@enbug.org>
+
+	* THANKS: New file.
+
+	* configure.ac (AC_INIT): Bumped to 1.0.
+
+	* failmalloc.c: Include errno.h.
+	(max_failures): New variable.
+	(max_space): Likewise.
+	(current_space): Likewise.
+	(should_fail): Added a new argument SIZE. All callers changed.
+	If MAX_FAILURES is zero, return zero immediately.
+	If MAX_SPACE is non-zero, check if the total amount of allocated
+	space is enough. If so, return zero immediately.
+	If MAX_FAILURES is more than zero, decrease it when failing.
+	(failmalloc): Set ERRNO to ENOMEM.
+	(failrealloc): Likewise.
+	(failmemalign): Likewise.
+	(failmalloc_init): Obtain FAILMALLOC_TIMES and FAILMALLOC_SPACE.
+
+2006-07-13  Yoshinori K. Okuji  <okuji@enbug.org>
+
+	* ChangeLog: New file.
